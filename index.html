@@ -155,9 +155,15 @@
   }
   .srcline a { font-family: var(--mono); font-size: .76rem; word-break: break-all; }
 
-  /* ---- mock frames ---- */
+  /* ---- screenshots ---- */
   figure { margin: 0; }
   figcaption { font-size: .76rem; color: var(--ink-soft); margin-top: 8px; font-style: italic; }
+  .shot {
+    display: block; width: 100%; height: auto; border-radius: 6px;
+    border: 1px solid var(--rule); background: var(--paper);
+  }
+  .shot.tall { max-width: 300px; margin: 0 auto; }
+  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
   .phone {
     width: 186px; margin: 0 auto; border-radius: 18px; overflow: hidden;
@@ -325,15 +331,9 @@
       <h2>Try Something New for 30 Days</h2>
       <div class="stack">
         <figure>
-          <div class="phone">
-            <div class="phone-top"><span>♪ TikTok</span><span>···</span></div>
-            <div class="stage">
-              <div class="stage-figure"></div>
-              <p class="stage-cap">a few years ago I felt like I was stuck in a rut</p>
-              <p class="stage-name">MATT <b>CUTTS</b></p>
-              <div class="phone-rail"><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="phone-foot"><b>@monicahidalgo839</b><span>TED TALK · Ver traducción</span></div>
+          <div class="shots">
+            <img class="shot" src="images/speaking-1-tiktok.jpg" alt="Matt Cutts' TED Talk playing on TikTok, captioned 'a few years ago I felt like I was stuck in a rut'">
+            <img class="shot" src="images/speaking-1-tiktok-playing.jpg" alt="The same TikTok post open in full view, with student reaction videos overlaid">
           </div>
           <figcaption>Matt Cutts' TED Talk, met where students actually meet it — on a TikTok feed.</figcaption>
         </figure>
@@ -407,28 +407,7 @@
       <h2>Editorial Inquiry &amp; Content Analysis</h2>
       <div class="stack">
         <figure>
-          <div class="browser">
-            <div class="browser-bar">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <span class="browser-url">bless-your-heartt.onrender.com</span>
-            </div>
-            <div class="screen">
-              <h5>Editorial Inquiry &amp; Content Analysis Workshop</h5>
-              <div class="chips"><span class="chip">Authentic reports</span><span class="chip">Academic lexicon</span><span class="chip">True/False</span><span class="chip">Synthesis</span></div>
-              <div class="grid2">
-                <div class="minicard">
-                  <span class="src">BBC News · Environment</span>
-                  <b>Rewilding &amp; Climate: how keystone species restore ecosystems</b>
-                  <q>"Restored trophic cascades let forests regenerate rapidly, acting as vital carbon sinks."</q>
-                </div>
-                <div class="minicard">
-                  <span class="src">National Geographic · Ocean</span>
-                  <b>Deep sea creatures in the Mariana Trench eat plastic</b>
-                  <q>"Scientists found synthetic microplastics at 36,000 feet below sea level."</q>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img class="shot" src="images/writing-1-editorial.jpg" alt="The Editorial Inquiry workshop, showing the BBC News and National Geographic report cards">
           <figcaption>A workshop app I built: read → lexicon → comprehension check → write.</figcaption>
         </figure>
         <div class="srcline">
@@ -453,31 +432,8 @@
       <h2>Writing a Blog Response</h2>
       <div class="stack">
         <figure>
-          <div class="browser">
-            <div class="browser-bar">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <span class="browser-url">fiiddnocchpionad.onrender.com</span>
-            </div>
-            <div class="screen">
-              <h5>Writing a Blog Response</h5>
-              <div class="chips"><span class="chip">200–250 words</span><span class="chip">Reading + viewing + writing</span></div>
-              <div class="grid2">
-                <div class="minicard">
-                  <span class="src">Blog post · Medium</span>
-                  <b>"Is Social Media Killing Us?"</b>
-                  <q>"Today's society can make us feel greedy, envious, and jealous — social media has amplified that."</q>
-                </div>
-                <div class="minicard">
-                  <span class="src">Video · BBC My World</span>
-                  <b>Is Social Media Good For You?</b>
-                  <q>A reporter argues social media has saved lives and built real connection.</q>
-                </div>
-              </div>
-              <div class="meter"><span>Words 214 / 200–250</span><span class="bar"><b style="width:86%"></b></span></div>
-              <div class="meter"><span>Lexical diversity</span><span class="bar"><b style="width:64%"></b></span></div>
-            </div>
-          </div>
-          <figcaption>Two real sources that disagree, and a workspace with live word-count and lexical-diversity meters.</figcaption>
+          <img class="shot" src="images/writing-2-blog.jpg" alt="The Writing a Blog Response app, showing the Medium post and the BBC My World video side by side">
+          <figcaption>Two real sources that disagree — one written, one spoken — above a workspace with live word-count and lexical-diversity meters.</figcaption>
         </figure>
         <div class="srcline">
           <span class="label">Live app</span>
@@ -572,12 +528,12 @@
     </article>
 
     <nav class="nav">
-      <button class="turnbtn" id="prev" aria-label="Previous page">◀ Prev</button>
+      <button class="turnbtn" id="prev"><span aria-hidden="true">◀</span> Previous</button>
       <div class="folio">
         <span class="ticks" id="ticks" aria-hidden="true"></span>
         <span id="folio">Cover</span>
       </div>
-      <button class="turnbtn" id="next" aria-label="Next page">Next ▶</button>
+      <button class="turnbtn" id="next">Next <span aria-hidden="true">▶</span></button>
     </nav>
 
   </div>
