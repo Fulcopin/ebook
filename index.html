@@ -59,10 +59,10 @@
     font-size: 17px;
     line-height: 1.65;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 96px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
   p { max-width: 65ch; }
   a { color: var(--teal); text-underline-offset: 3px; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 3px; }
+  a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 3px; }
 
   .label {
     font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
@@ -71,16 +71,15 @@
 
   /* ---- cover ---- */
   .cover {
-    min-height: 88vh; display: flex; flex-direction: column; justify-content: center;
-    gap: 28px; border-bottom: 1px solid var(--rule); padding: 64px 0 72px;
+    min-height: 82vh; display: flex; flex-direction: column; justify-content: center;
+    gap: 26px; border-bottom: 1px solid var(--rule); padding: 56px 0 64px;
   }
   .cover h1 {
     font-family: var(--display); font-weight: 400; line-height: 1.05;
-    font-size: clamp(2.6rem, 7vw, 4.4rem); text-wrap: balance; letter-spacing: -.015em;
-    margin: 0;
+    font-size: clamp(2.6rem, 7vw, 4.2rem); text-wrap: balance; letter-spacing: -.015em;
   }
   .cover h1 em { font-style: italic; color: var(--teal); }
-  .cover .deck { font-size: 1.15rem; color: var(--ink-soft); max-width: 52ch; }
+  .cover .deck { font-size: 1.12rem; color: var(--ink-soft); max-width: 50ch; }
   .cover-meta {
     display: flex; flex-wrap: wrap; gap: 8px 28px; padding-top: 12px;
     border-top: 1px solid var(--rule);
@@ -88,41 +87,31 @@
   .cover-meta div { display: flex; flex-direction: column; gap: 2px; }
   .cover-meta b { font-weight: 600; font-size: .95rem; }
   .strip { display: flex; gap: 6px; }
-  .strip span { height: 5px; flex: 1; border-radius: 99px; background: var(--rule); }
+  .strip span { height: 5px; flex: 1; border-radius: 99px; }
   .strip span:nth-child(1), .strip span:nth-child(2) { background: var(--amber); }
   .strip span:nth-child(3), .strip span:nth-child(4) { background: var(--teal); }
 
   /* ---- sections ---- */
-  section { padding-top: 72px; }
+  section { padding-top: 64px; }
   h2 {
-    font-family: var(--display); font-weight: 400; font-size: clamp(1.7rem, 3.6vw, 2.3rem);
-    letter-spacing: -.01em; margin: 8px 0 20px; text-wrap: balance;
+    font-family: var(--display); font-weight: 400; font-size: clamp(1.7rem, 3.6vw, 2.2rem);
+    letter-spacing: -.01em; margin: 8px 0 18px; text-wrap: balance;
   }
-  h3 { font-size: 1.05rem; font-weight: 650; margin: 32px 0 8px; }
-  h4 { font-size: .95rem; font-weight: 650; margin: 20px 0 6px; }
-
-  .callout {
-    background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
-    padding: 20px 22px; box-shadow: var(--shadow); margin-top: 20px;
-  }
-  .callout p:last-child { margin-bottom: 0; }
-
-  dl.terms { display: grid; gap: 18px; margin: 20px 0 0; }
-  dl.terms dt { font-weight: 650; }
-  dl.terms dd { margin: 2px 0 0; color: var(--ink-soft); max-width: 65ch; }
+  h3 { font-size: 1.02rem; font-weight: 650; margin: 26px 0 6px; }
+  h4 { font-size: .82rem; font-weight: 650; margin: 0 0 4px; letter-spacing: .02em; }
 
   /* ---- activity cards ---- */
   .act {
     background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
-    box-shadow: var(--shadow); margin-top: 32px; overflow: hidden;
+    box-shadow: var(--shadow); margin-top: 28px; overflow: hidden;
   }
   .act-head {
-    padding: 22px 24px 20px; border-bottom: 1px solid var(--rule);
+    padding: 20px 24px 18px; border-bottom: 1px solid var(--rule);
     border-top: 3px solid var(--track);
   }
   .act[data-track="speaking"] { --track: var(--amber); --track-soft: var(--amber-soft); }
   .act[data-track="writing"]  { --track: var(--teal);  --track-soft: var(--teal-soft); }
-  .act-kicker { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .act-kicker { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .pill {
     font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
     background: var(--track-soft); color: var(--track); padding: 3px 9px; border-radius: 99px;
@@ -130,38 +119,36 @@
   }
   .pill.plain { background: transparent; color: var(--ink-soft); border: 1px solid var(--rule); }
   .act-head h3 {
-    font-family: var(--display); font-weight: 400; font-size: 1.5rem;
-    margin: 10px 0 6px; letter-spacing: -.01em;
+    font-family: var(--display); font-weight: 400; font-size: 1.45rem;
+    margin: 10px 0 0; letter-spacing: -.01em;
   }
-  .act-head p { color: var(--ink-soft); margin: 0; font-size: .97rem; }
-  .act-body { padding: 24px; display: flex; flex-direction: column; gap: 20px; }
-  .act-body p { margin: 0; }
+  .act-body { padding: 22px 24px; display: flex; flex-direction: column; gap: 18px; }
+  .act-body p { margin: 0; font-size: .97rem; }
 
   .srcline {
-    display: flex; gap: 10px; align-items: baseline; padding: 12px 14px;
+    display: flex; gap: 10px; align-items: baseline; padding: 10px 13px;
     background: var(--paper); border: 1px solid var(--rule); border-radius: 4px;
-    font-size: .9rem; overflow-x: auto;
+    font-size: .88rem; overflow-x: auto;
   }
-  .srcline a { font-family: var(--mono); font-size: .8rem; word-break: break-all; }
+  .srcline a { font-family: var(--mono); font-size: .78rem; word-break: break-all; }
 
   /* ---- mock frames ---- */
   figure { margin: 0; }
-  figcaption { font-size: .8rem; color: var(--ink-soft); margin-top: 8px; font-style: italic; }
+  figcaption { font-size: .78rem; color: var(--ink-soft); margin-top: 8px; font-style: italic; }
 
   .phone {
-    width: 208px; margin: 0 auto; border-radius: 20px; overflow: hidden;
+    width: 200px; margin: 0 auto; border-radius: 20px; overflow: hidden;
     background: #0B0B0F; border: 1px solid #2A2A33; box-shadow: var(--shadow);
-    font-family: var(--body);
   }
   .phone-top { display: flex; justify-content: space-between; padding: 8px 10px; color: #fff; font-size: 11px; font-weight: 700; }
   .stage {
-    height: 250px; background: linear-gradient(170deg, #4A1150, #7B1E5C 55%, #241026);
+    height: 236px; background: linear-gradient(170deg, #4A1150, #7B1E5C 55%, #241026);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 6px; padding: 0 12px; text-align: center; position: relative;
   }
   .stage-cap { color: #fff; font-weight: 800; font-size: 13px; line-height: 1.25; text-shadow: 0 1px 4px rgba(0,0,0,.6); }
   .stage-name { color: #fff; font-size: 10px; letter-spacing: .12em; opacity: .85; }
-  .stage-figure { width: 26px; height: 54px; border-radius: 12px 12px 4px 4px; background: #12121A; opacity: .9; }
+  .stage-figure { width: 26px; height: 52px; border-radius: 12px 12px 4px 4px; background: #12121A; opacity: .9; }
   .phone-rail { position: absolute; right: 6px; bottom: 12px; display: flex; flex-direction: column; gap: 10px; }
   .phone-rail i { display: block; width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,.22); }
   .phone-foot { padding: 8px 10px; color: #C9C9D2; font-size: 10px; display: flex; flex-direction: column; gap: 2px; }
@@ -178,9 +165,9 @@
     background: var(--card); border: 1px solid var(--rule); border-radius: 99px;
     padding: 2px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
-  .screen { padding: 20px 18px; display: flex; flex-direction: column; gap: 14px; }
+  .screen { padding: 18px 16px; display: flex; flex-direction: column; gap: 12px; }
   .screen h5 {
-    font-family: var(--display); font-weight: 400; font-size: 1.25rem; margin: 0;
+    font-family: var(--display); font-weight: 400; font-size: 1.2rem;
     letter-spacing: -.01em;
   }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -196,18 +183,9 @@
   .minicard .src { font-family: var(--mono); font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--track); }
   .minicard b { font-weight: 650; line-height: 1.35; }
   .minicard q { color: var(--ink-soft); font-style: italic; font-size: .74rem; }
-  .tf { display: flex; gap: 6px; }
-  .tf span { flex: 1; text-align: center; border: 1px solid var(--rule); border-radius: 4px; padding: 3px; font-size: .68rem; font-family: var(--mono); }
   .meter { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; color: var(--ink-soft); }
   .meter .bar { flex: 1; height: 5px; border-radius: 99px; background: var(--rule); overflow: hidden; }
   .meter .bar b { display: block; height: 100%; background: var(--track); }
-  .steps { display: flex; flex-direction: column; gap: 7px; }
-  .step {
-    display: flex; align-items: center; gap: 9px; border: 1px solid var(--rule);
-    border-radius: 5px; padding: 8px 10px; font-size: .8rem;
-  }
-  .step u { text-decoration: none; font-family: var(--mono); font-size: 10px; color: var(--track); }
-  .step small { margin-left: auto; font-family: var(--mono); font-size: 9px; color: var(--ink-soft); }
   .padlet-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .padlet-col { border: 1px solid var(--rule); border-radius: 5px; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
   .padlet-col > .label { color: var(--track); }
@@ -217,28 +195,30 @@
   }
   .note em { color: var(--ink-soft); font-style: normal; font-family: var(--mono); font-size: 9px; display: block; margin-bottom: 2px; }
 
-  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
-  .tablewrap { overflow-x: auto; margin-top: 20px; border: 1px solid var(--rule); border-radius: 5px; }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  .tablewrap { overflow-x: auto; margin-top: 18px; border: 1px solid var(--rule); border-radius: 5px; }
   th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  th { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
-  tr:last-child td { border-bottom: none; }
-  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  th { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; white-space: nowrap; }
+  tr:last-child td, tr:last-child th { border-bottom: none; }
 
-  ol.refs { padding-left: 0; list-style: none; counter-reset: r; display: grid; gap: 14px; margin-top: 20px; }
+  .theory { display: grid; gap: 20px; margin-top: 20px; }
+  .theory div { padding-left: 16px; border-left: 2px solid var(--rule); }
+  .theory p { margin: 0; font-size: .95rem; }
+
+  ol.refs { list-style: none; counter-reset: r; display: grid; gap: 12px; margin-top: 16px; }
   ol.refs li {
-    counter-increment: r; padding-left: 34px; position: relative; font-size: .92rem;
-    line-height: 1.55; max-width: 68ch;
+    counter-increment: r; padding-left: 30px; position: relative; font-size: .89rem;
+    line-height: 1.5; max-width: 68ch;
   }
   ol.refs li::before {
     content: counter(r); position: absolute; left: 0; top: 1px;
     font-family: var(--mono); font-size: 10px; color: var(--ink-soft);
-    border: 1px solid var(--rule); border-radius: 50%; width: 20px; height: 20px;
+    border: 1px solid var(--rule); border-radius: 50%; width: 19px; height: 19px;
     display: grid; place-items: center;
   }
   ol.refs a { word-break: break-word; }
 
-  hr { border: none; border-top: 1px solid var(--rule); margin: 0; }
-  .end { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: .88rem; }
+  .end { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: .85rem; }
 
   @media (max-width: 620px) {
     .grid2, .padlet-cols { grid-template-columns: 1fr; }
@@ -253,59 +233,50 @@
   <header class="cover">
     <div class="strip"><span></span><span></span><span></span><span></span></div>
     <div>
-      <p class="label">Theme 8 · Final Task · Authentic Material Portfolio</p>
+      <p class="label">Theme 8 · Final Task</p>
       <h1>Authentic Materials <em>in Action</em></h1>
     </div>
-    <p class="deck">Four classroom activities — two for speaking, two for writing — built on real TikTok, TED, BBC, National Geographic and Medium content, and delivered through TikTok, Padlet and two web apps I coded myself.</p>
+    <p class="deck">Four activities for a B2 class — two speaking, two writing — each built on real TikTok, TED, BBC, National Geographic and Medium content.</p>
     <div class="cover-meta">
       <div><span class="label">Level</span><b>B2 (CEFR)</b></div>
       <div><span class="label">Skills</span><b>Speaking &amp; Writing</b></div>
-      <div><span class="label">Activities</span><b>4 authentic materials</b></div>
-      <div><span class="label">Tools</span><b>TikTok · Padlet · React</b></div>
+      <div><span class="label">Tools</span><b>TikTok · Padlet · Web apps</b></div>
     </div>
   </header>
 
-  <section id="intro">
+  <section>
     <p class="label">01 — Introduction</p>
-    <h2>What this ebook is about</h2>
-    <p>This ebook documents four activities I designed for a B2 English class, each one built around a piece of <strong>authentic material</strong> — content made by real speakers for real audiences, not written for a textbook. Nothing here was simplified, graded or invented for the classroom.</p>
-    <p>Each activity is presented the same way: a screen from the material, the link to the original source, a short explanation of what students actually do, and the reason that particular material earns its place in a speaking or writing lesson. The theoretical foundation follows in section 04, and every source is listed at the end.</p>
-    <div class="callout">
-      <h4 style="margin-top:0">Why these four</h4>
-      <p>A TED Talk clip circulating on TikTok, a TEDx talk on gamification, two international news reports, and a personal blog post paired with a BBC video. Together they cover the range a B2 student meets outside class: informal spoken English, academic argument, scientific journalism, and personal opinion writing.</p>
-    </div>
+    <h2>About this task</h2>
+    <p>This ebook presents four activities built around <strong>authentic material</strong> — content made by real speakers for real audiences, not written for a textbook. Nothing here was simplified or graded for the classroom.</p>
+    <p>Each activity shows a screen from the material, the link to the original source, what students do, and why that material earns its place. The theory follows in section 04; every source is listed at the end.</p>
   </section>
 
-  <section id="context">
-    <p class="label">02 — Context Description</p>
+  <section>
+    <p class="label">02 — Context</p>
     <h2>Who these activities are for</h2>
     <div class="tablewrap">
       <table>
-        <tr><th>Students</th><td>Young adults, approximately 17–22 years old, in higher education.</td></tr>
-        <tr><th>Level</th><td>B2 (Upper-Intermediate) on the CEFR. They can follow extended speech, but hesitate when they have to defend an opinion under time pressure.</td></tr>
-        <tr><th>Profile</th><td>Digital natives. Social media, learning platforms, video games and language apps are part of their daily environment — the material meets them where they already are.</td></tr>
-        <tr><th>Needs</th><td>Fluency and confidence in unscripted speaking; lexical range and a clear position in academic writing.</td></tr>
-        <tr><th>Setting</th><td>Blended: face-to-face discussion plus asynchronous digital work (Padlet walls, browser-based workspaces).</td></tr>
-        <tr><th>Session length</th><td>35–60 minutes per activity, extendable across two sessions.</td></tr>
+        <tr><th>Students</th><td>Young adults, 17–22, in higher education. Digital natives — social media and video are part of their daily environment.</td></tr>
+        <tr><th>Level</th><td>B2 (Upper-Intermediate), CEFR. They follow extended speech well, but hesitate when defending an opinion under pressure.</td></tr>
+        <tr><th>Needs</th><td>Fluency and confidence in unscripted speaking; lexical range and a clear position in writing.</td></tr>
+        <tr><th>Setting</th><td>Blended — class discussion plus asynchronous digital work. 35–60 minutes per activity.</td></tr>
       </table>
     </div>
   </section>
 
-  <section id="activities">
+  <section>
     <p class="label">03 — Selected Authentic Material</p>
     <h2>The four activities</h2>
-    <p>Two speaking activities open the sequence; two writing activities close it. The amber rule marks speaking, the teal rule marks writing.</p>
+    <p>Amber marks speaking, teal marks writing.</p>
 
     <!-- ACTIVITY 1 -->
     <article class="act" data-track="speaking">
       <div class="act-head">
         <div class="act-kicker">
-          <span class="pill">Speaking · Activity 1</span>
+          <span class="pill">Speaking · 1</span>
           <span class="pill plain">TikTok</span>
-          <span class="pill plain">B2</span>
         </div>
         <h3>Try Something New for 30 Days</h3>
-        <p>Matt Cutts' TED Talk, met where students actually meet it — on a TikTok feed.</p>
       </div>
       <div class="act-body">
         <figure>
@@ -319,19 +290,19 @@
             </div>
             <div class="phone-foot"><b>@monicahidalgo839</b><span>TED TALK · Ver traducción</span></div>
           </div>
-          <figcaption>Reconstruction of the TikTok screen used in class. Open the link below for the real post.</figcaption>
+          <figcaption>Matt Cutts' TED Talk, met where students actually meet it — on a TikTok feed.</figcaption>
         </figure>
         <div class="srcline">
           <span class="label">Source</span>
           <a href="https://www.tiktok.com/@monicahidalgo839/video/7663259472340454663" target="_blank" rel="noopener">tiktok.com/@monicahidalgo839/video/7663259472340454663</a>
         </div>
         <div>
-          <h4>What students do</h4>
-          <p>They watch the clip, then talk: about a habit they would try for thirty days, what would get in the way, and what actually changed the last time they committed to something small. The talk is the prompt, not the lesson — the goal is unscripted speech about their own goals and routines.</p>
+          <h4 class="label">What students do</h4>
+          <p>They watch the clip, then talk: a habit they would try for thirty days, what would get in the way, what changed last time they committed to something small. The talk is the prompt — the goal is unscripted speech about their own goals and routines.</p>
         </div>
         <div>
-          <h4>Why this material</h4>
-          <p>Cutts speaks at natural speed with real hesitation and rhythm, so students hear English as it is spoken rather than as it is recorded for a coursebook. The 30-day-challenge premise gives every student something to say without special knowledge, and the vocabulary it supplies — <em>habit, challenge, stuck in a rut, motivation, personal growth</em> — is exactly the lexical field the discussion needs. Delivering it through TikTok matters: the material arrives in the same format and the same feed students already scroll, which removes the distance between "English class" and their real digital lives.</p>
+          <h4 class="label">Why this material</h4>
+          <p>Cutts speaks at natural speed with real hesitation, so students hear English as it is spoken. The premise gives everyone something to say without special knowledge, and it supplies exactly the lexis the discussion needs — <em>habit, challenge, stuck in a rut, motivation</em>. Delivering it through TikTok matters: it arrives in the same feed students already scroll.</p>
         </div>
       </div>
     </article>
@@ -340,12 +311,11 @@
     <article class="act" data-track="speaking">
       <div class="act-head">
         <div class="act-kicker">
-          <span class="pill">Speaking · Activity 2</span>
+          <span class="pill">Speaking · 2</span>
           <span class="pill plain">Padlet</span>
           <span class="pill plain">TEDx</span>
         </div>
-        <h3>The Gamification Dilemma in Modern Classrooms</h3>
-        <p>An asynchronous video debate: Technology Innovators against Traditional Educators.</p>
+        <h3>The Gamification Dilemma</h3>
       </div>
       <div class="act-body">
         <figure>
@@ -356,22 +326,20 @@
             </div>
             <div class="screen">
               <h5>The Gamification Dilemma</h5>
-              <div class="chips"><span class="chip">2-min argument</span><span class="chip">1-min rebuttal</span><span class="chip">Video wall</span></div>
+              <div class="chips"><span class="chip">2-min argument</span><span class="chip">1-min rebuttal</span></div>
               <div class="padlet-cols">
                 <div class="padlet-col">
                   <span class="label">Technology Innovators</span>
-                  <div class="note"><em>▶ 2:00 · video</em>"Points and levels raise engagement and retention — motivation is the precondition for learning."</div>
-                  <div class="note"><em>▶ 1:00 · rebuttal</em>"Rewards can be faded out once the habit is formed."</div>
+                  <div class="note"><em>▶ 2:00</em>"Points and levels raise engagement and retention — motivation is the precondition for learning."</div>
                 </div>
                 <div class="padlet-col">
                   <span class="label">Traditional Educators</span>
-                  <div class="note"><em>▶ 2:00 · video</em>"Constant rewards erode intrinsic motivation and lower tolerance for difficulty."</div>
-                  <div class="note"><em>▶ 1:00 · rebuttal</em>"Rigour needs patience that fast gratification undoes."</div>
+                  <div class="note"><em>▶ 2:00</em>"Constant rewards erode intrinsic motivation and lower tolerance for difficulty."</div>
                 </div>
               </div>
             </div>
           </div>
-          <figcaption>The Padlet wall: every student posts one argument video and one reply to a classmate.</figcaption>
+          <figcaption>An asynchronous video debate on Padlet: two assigned roles, one wall.</figcaption>
         </figure>
         <div class="srcline">
           <span class="label">Wall</span>
@@ -381,25 +349,13 @@
           <span class="label">Video</span>
           <a href="https://youtu.be/tgg59icEFIE" target="_blank" rel="noopener">youtu.be/tgg59icEFIE</a>
         </div>
-        <div class="srcline">
-          <span class="label">Video</span>
-          <a href="https://youtu.be/mOssYTimQwM" target="_blank" rel="noopener">youtu.be/mOssYTimQwM</a>
+        <div>
+          <h4 class="label">What students do</h4>
+          <p>After a TEDx talk on gamification, the class splits. <strong>Technology Innovators</strong> argue game mechanics raise engagement and retention; <strong>Traditional Educators</strong> argue constant rewards erode intrinsic motivation. Each student records a <strong>2-minute argument</strong> on Padlet, then a <strong>1-minute rebuttal</strong> to an opponent — politely, with evidence.</p>
         </div>
         <div>
-          <h4>Objective</h4>
-          <p>By analysing a real talk on gamification and taking part in an asynchronous debate, students strengthen critical thinking, fluency and argumentation — using academic vocabulary from education and technology, stating a position, and responding to an opposing one.</p>
-        </div>
-        <div>
-          <h4>What students do</h4>
-          <p>They watch a TEDx talk on gamification (Gabe Zichermann's is the suggested example), then the class splits in two. <strong>Technology Innovators</strong> argue that game mechanics raise engagement, motivation and retention. <strong>Traditional Educators</strong> argue that constant rewards erode intrinsic motivation and lower students' tolerance for frustration. Each student records a <strong>two-minute argument video</strong> on Padlet defending their assigned role, then watches an opponent's video and posts a <strong>one-minute rebuttal</strong> that questions a specific point, politely and with evidence.</p>
-        </div>
-        <div>
-          <h4>Why this material</h4>
-          <p>A TEDx talk exposes students to real accents, colloquial phrasing and an argument built to persuade an audience — not to illustrate a grammar point. The topic is one they live daily, so both sides are genuinely arguable, and the assigned role forces them to defend a position they may not hold, which is where argumentation gets learned. The two-minute cap on Padlet equalises speaking time: every student produces the same amount of language, and the asynchronous format lets quieter students rehearse without the pressure of a live floor.</p>
-        </div>
-        <div>
-          <h4>Language it produces</h4>
-          <p>Target lexis: <em>intrinsic motivation, rewards, engagement, retention</em>. Target structures for B2: formal recommendation (<em>"Schools should set screen-time limits to prevent cognitive fatigue"</em>) and advanced conditionals (<em>"If teachers were to eliminate games entirely, students could lose their connection to essential digital tools"</em>).</p>
+          <h4 class="label">Why this material</h4>
+          <p>A TEDx talk exposes students to real accents and an argument built to persuade, not to illustrate grammar. The topic is one they live daily, so both sides are genuinely arguable — and the assigned role forces them to defend a position they may not hold, which is where argumentation gets learned. The 2-minute cap equalises speaking time, and the asynchronous format lets quieter students rehearse.</p>
         </div>
       </div>
     </article>
@@ -408,12 +364,10 @@
     <article class="act" data-track="writing">
       <div class="act-head">
         <div class="act-kicker">
-          <span class="pill">Writing · Activity 1</span>
-          <span class="pill plain">Web app I built</span>
+          <span class="pill">Writing · 1</span>
           <span class="pill plain">BBC · NatGeo</span>
         </div>
-        <h3>Editorial Inquiry &amp; Content Analysis Workshop</h3>
-        <p>Two real environmental reports, six academic terms, and a 200–250 word critical synthesis.</p>
+        <h3>Editorial Inquiry &amp; Content Analysis</h3>
       </div>
       <div class="act-body">
         <figure>
@@ -424,67 +378,34 @@
             </div>
             <div class="screen">
               <h5>Editorial Inquiry &amp; Content Analysis Workshop</h5>
-              <div class="chips"><span class="chip">1 · Authentic reports</span><span class="chip">2 · Academic lexicon</span><span class="chip">3 · True/False &amp; inquiry</span><span class="chip">4 · Analytical synthesis</span></div>
+              <div class="chips"><span class="chip">Authentic reports</span><span class="chip">Academic lexicon</span><span class="chip">True/False</span><span class="chip">Synthesis</span></div>
               <div class="grid2">
                 <div class="minicard">
-                  <span class="src">BBC News · Science &amp; Environment</span>
-                  <b>Rewilding &amp; Climate: how returning keystone species restore ecosystems</b>
-                  <q>"When natural trophic cascades are restored, forests and wetlands regenerate rapidly, acting as vital carbon sinks."</q>
+                  <span class="src">BBC News · Environment</span>
+                  <b>Rewilding &amp; Climate: how keystone species restore ecosystems</b>
+                  <q>"Restored trophic cascades let forests regenerate rapidly, acting as vital carbon sinks."</q>
                 </div>
                 <div class="minicard">
                   <span class="src">National Geographic · Ocean</span>
-                  <b>Deep sea creatures in the Mariana Trench eat plastic, study finds</b>
+                  <b>Deep sea creatures in the Mariana Trench eat plastic</b>
                   <q>"Scientists found synthetic microplastics at 36,000 feet below sea level."</q>
                 </div>
               </div>
-              <div class="minicard">
-                <span class="src">Part A · True / False challenge</span>
-                <b>Passive conservation alone is sufficient to restore trophic cascades.</b>
-                <div class="tf"><span>True</span><span>False</span></div>
-              </div>
             </div>
           </div>
-          <figcaption>The workshop app: read → learn the lexicon → test comprehension → write the synthesis.</figcaption>
+          <figcaption>A workshop app I built: read → lexicon → comprehension check → write.</figcaption>
         </figure>
         <div class="srcline">
           <span class="label">Live app</span>
           <a href="https://bless-your-heartt.onrender.com/" target="_blank" rel="noopener">bless-your-heartt.onrender.com</a>
         </div>
         <div>
-          <h4>What students do</h4>
-          <p>The workshop runs in four steps. They <strong>read</strong> at least one of the two authentic reports (audio available for each). They <strong>study six curated academic terms</strong> pulled straight from the articles. They take a <strong>True/False challenge</strong> on the precise scientific claims. Finally they <strong>write two critical questions of their own</strong> — one on scientific method, one on socio-economic feasibility — and a <strong>200–250 word analytical synthesis</strong>.</p>
+          <h4 class="label">What students do</h4>
+          <p>They read one of two authentic reports, study six academic terms drawn from them — <em>rewilding, trophic cascade, Anthropocene, microplastics, ecological resilience, mitigation strategies</em> — take a True/False check on the precise scientific claims, then write two critical questions of their own and a <strong>200–250 word analytical synthesis</strong>.</p>
         </div>
         <div>
-          <h4>The academic lexicon</h4>
-          <dl class="terms">
-            <div><dt>Rewilding</dt><dd>Large-scale ecological restoration that returns native species so nature can regulate itself again.</dd></div>
-            <div><dt>Trophic cascade</dt><dd>The chain reaction through a food web when a keystone species or apex predator is added or removed.</dd></div>
-            <div><dt>Anthropocene</dt><dd>The current geological epoch, defined by human activity as the dominant force on climate and environment.</dd></div>
-            <div><dt>Microplastics</dt><dd>Synthetic fragments under 5&nbsp;mm from industrial waste and degraded consumer products.</dd></div>
-            <div><dt>Ecological resilience</dt><dd>An ecosystem's capacity to absorb and recover from severe disturbance without losing its structure.</dd></div>
-            <div><dt>Mitigation strategies</dt><dd>Technical, legislative and social measures designed to reduce or eliminate an environmental hazard.</dd></div>
-          </dl>
-        </div>
-        <div>
-          <h4>The comprehension check</h4>
-          <div class="tablewrap">
-            <table>
-              <tr><th>Statement</th><th>Answer</th></tr>
-              <tr><td>Passive conservation — simply fencing off habitat — is enough to restore trophic cascades.</td><td class="num">False — active rewilding with keystone species is required.</td></tr>
-              <tr><td>Scientists confirmed synthetic microplastics 36,000 feet below sea level.</td><td class="num">True</td></tr>
-              <tr><td>Reintroducing predators causes riverbank erosion by driving herbivores to the water.</td><td class="num">False — predators disperse herbivores, letting riverside vegetation regrow and <em>stopping</em> erosion.</td></tr>
-              <tr><td>Deep-sea microfibres come from industrial runoff and floating synthetic textiles.</td><td class="num">True</td></tr>
-            </table>
-          </div>
-        </div>
-        <div>
-          <h4>Two model syntheses</h4>
-          <p><strong>Option 1 — the ecological case (BBC, supporting the article).</strong> The questions: how does reintroducing keystone species trigger a trophic cascade, and what empirical evidence shows it accelerates carbon capture? And how can governments balance that urgency against farmers' fears for their livestock? The 226-word answer explains the biology of the cascade, argues that self-regulating forests are the strongest natural shield against warming, and resolves the human conflict with protected wildlife corridors and state compensation schemes.</p>
-          <p><strong>Option 2 — the policy case (National Geographic, criticising the article's solution).</strong> The questions: why do synthetic polymers bioaccumulate so heavily in benthic organisms at 36,000 feet? And can municipal circular-economy incentives and biotechnology outpace slow international treaties? The 228-word answer accepts the science on the Mariana Trench but rejects treaty-dependence — decades slow, unenforced, ignored by industry — and proposes municipal Extended Producer Responsibility laws, circular-economy incentives, and subsidised biotech (plastic-eating engineered enzymes, algae-based bioplastics) that stop toxic plastic at the factory.</p>
-        </div>
-        <div>
-          <h4>Why this material</h4>
-          <p>BBC News and National Geographic are written for informed adult readers, so the syntax and lexical density are genuinely B2–C1 — no simplification to unlearn later. Both reports make falsifiable claims, which is what makes a True/False check meaningful and a critical question possible: students can only challenge a text that actually asserts something. And because the two reports pull in different directions — restoration that works, pollution that persists — the writing task has a real argument to take a side in rather than a summary to reproduce.</p>
+          <h4 class="label">Why this material</h4>
+          <p>BBC News and National Geographic are written for informed adult readers, so the lexical density is genuinely B2–C1 — no simplification to unlearn later. Both make falsifiable claims, which is what makes a comprehension check meaningful and a critical question possible: students can only challenge a text that actually asserts something.</p>
         </div>
       </div>
     </article>
@@ -493,12 +414,10 @@
     <article class="act" data-track="writing">
       <div class="act-head">
         <div class="act-kicker">
-          <span class="pill">Writing · Activity 2</span>
-          <span class="pill plain">Web app I built</span>
+          <span class="pill">Writing · 2</span>
           <span class="pill plain">Medium · BBC</span>
         </div>
         <h3>Writing a Blog Response</h3>
-        <p>One blog post, one BBC video, one question: is social media good for us? Take a position.</p>
       </div>
       <div class="act-body">
         <figure>
@@ -509,127 +428,108 @@
             </div>
             <div class="screen">
               <h5>Writing a Blog Response</h5>
-              <div class="chips"><span class="chip">200–250 words</span><span class="chip">35–45 min</span><span class="chip">Reading + viewing + writing</span></div>
+              <div class="chips"><span class="chip">200–250 words</span><span class="chip">Reading + viewing + writing</span></div>
               <div class="grid2">
                 <div class="minicard">
                   <span class="src">Blog post · Medium</span>
                   <b>"Is Social Media Killing Us?"</b>
-                  <q>"I think today's society can make us feel greedy, envious, and jealous, and social media has amplified that."</q>
+                  <q>"Today's society can make us feel greedy, envious, and jealous — social media has amplified that."</q>
                 </div>
                 <div class="minicard">
                   <span class="src">Video · BBC My World</span>
                   <b>Is Social Media Good For You?</b>
-                  <q>A reporter answers a teen viewer on camera — arguing social media has saved lives and built real connection.</q>
+                  <q>A reporter argues social media has saved lives and built real connection.</q>
                 </div>
-              </div>
-              <div class="steps">
-                <div class="step"><u>1</u>Read the authentic post<small>Mark read</small></div>
-                <div class="step"><u>2</u>Analyse the main ideas<small>Auto-tracked</small></div>
-                <div class="step"><u>3</u>Write 200–250 words<small>Auto-tracked</small></div>
-                <div class="step"><u>4</u>Agree or disagree<small>Auto-tracked</small></div>
               </div>
               <div class="meter"><span>Words 214 / 200–250</span><span class="bar"><b style="width:86%"></b></span></div>
               <div class="meter"><span>Lexical diversity</span><span class="bar"><b style="width:64%"></b></span></div>
             </div>
           </div>
-          <figcaption>The workspace tracks three of the four steps by itself; confetti fires when all four are done.</figcaption>
+          <figcaption>Two real sources that disagree, and a workspace with live word-count and lexical-diversity meters.</figcaption>
         </figure>
         <div class="srcline">
           <span class="label">Live app</span>
           <a href="https://fiiddnocchpionad.onrender.com/" target="_blank" rel="noopener">fiiddnocchpionad.onrender.com</a>
         </div>
         <div>
-          <h4>What students do</h4>
-          <p>They read Noemi Di Stefano's Medium essay <em>"Is Social Media Killing Us?"</em> — a personal argument that platforms amplify envy and comparison — and watch a BBC My World reporter answer the same question on camera, arguing the opposite: social media has saved lives and built genuine connection. Then they write a 200–250 word response that takes a <strong>clear position</strong>. Agreeing or disagreeing is required; summarising is not enough.</p>
+          <h4 class="label">What students do</h4>
+          <p>They read a Medium essay arguing social media amplifies envy, watch a BBC reporter argue the opposite, then write a 200–250 word response taking a <strong>clear position</strong>. Agreeing or disagreeing is required; summarising is not enough. The app tracks the steps itself and shows word count and lexical diversity live as they type.</p>
         </div>
         <div>
-          <h4>How the app supports the writing</h4>
-          <p>Everything lives on one page, with nothing uploaded anywhere. A <strong>Listen</strong> button reads the blog quote aloud through the browser's speech synthesis. A <strong>quick check</strong> of three True/False questions on the video gives feedback explaining each answer. The workspace holds two analysis fields — the post's main argument, one example she uses — the agree/disagree buttons, and the textarea. Two live meters run underneath: a <strong>word count</strong> against the 200–250 target, and <strong>lexical diversity</strong>, calculated as unique words divided by total words. Three of the four steps tick themselves off — step 2 when the quiz is answered, step 3 when the word count enters range, step 4 when a position is chosen — and finishing all four releases the final button and a burst of confetti.</p>
-        </div>
-        <div>
-          <h4>Why this material</h4>
-          <p>The pairing is the point. One source is written and personal, the other spoken and journalistic, and they disagree — so the student cannot write a safe summary. They have to weigh two real voices and land somewhere. Neither text was simplified: the Medium post keeps its informal digressions, the BBC video its unscripted delivery. And the topic is one every student already has a private opinion about, which is what turns a writing exercise into something they want to say.</p>
-        </div>
-        <div>
-          <h4>The evidence behind the lexical diversity meter</h4>
-          <p>The meter is not decoration. Chan, Lowie and de Bot (2016) compared the same learners' written and spoken production and found writing yields significantly higher lexical diversity — planning time lets students reach for words speech does not give them time to retrieve. Showing the ratio live makes that affordance visible, and nudges students to use it.</p>
+          <h4 class="label">Why this material</h4>
+          <p>The pairing is the point: one source written and personal, the other spoken and journalistic — and they disagree, so a safe summary is impossible. Neither was simplified. And every student already has a private opinion on the topic, which is what turns a writing exercise into something they want to say.</p>
         </div>
       </div>
     </article>
   </section>
 
-  <section id="theory">
+  <section>
     <p class="label">04 — Theoretical Foundation</p>
     <h2>Why these activities support learning</h2>
-    <p>Five ideas hold this sequence together. Each one is doing real work in the four activities above.</p>
-
-    <h3>Authentic Materials</h3>
-    <p>Authentic materials are texts produced by real speakers for real audiences, with no pedagogical intent (Nunan, 1989). Their value is exposure to language as it is actually used — the hesitations in Cutts' talk, the lexical density of a BBC report, the digressions in a personal blog. Gilmore (2007) argues their strongest contribution is motivational: students recognise the content as real, and the task stops feeling like an exercise. Every material here is unedited, and every one is linked to its original source in section 06.</p>
-
-    <h3>Writing and Speaking Process</h3>
-    <p>Both skills are treated as processes, not products. The writing activities run through planning (identify the main argument, note an example), drafting (the 200–250 word workspace), and revising against visible criteria — word count, lexical diversity, position taken. The speaking activities do the same: students prepare an argument, record it, listen to an opponent, and produce a considered rebuttal. Chan, Lowie and de Bot (2016) supply the reason the two skills are worth separating — writing's planning time produces measurably richer lexis than speech, so each mode is practised for what it uniquely develops.</p>
-
-    <h3>Communicative Language Teaching (CLT)</h3>
-    <p>CLT holds that language is learned by using it to mean something, and that fluency and accuracy are complementary goals (Richards &amp; Rodgers, 2014). Nothing in these four activities has a single correct answer. Students state opinions about their own habits, defend an assigned position on gamification, take a side on plastics policy, agree or disagree about social media. Language is the means; the message is the point.</p>
-
-    <h3>Task-Based Learning (TBL)</h3>
-    <p>In TBL the task drives the language, not the reverse (Willis &amp; Willis, 2007). Each activity here ends in a real outcome: a posted argument video, a rebuttal, a critical question, a 200–250 word synthesis. Grammar and vocabulary appear because the task demands them — advanced conditionals surface in the debate because that is how you argue a counterfactual, not because a syllabus scheduled them for that week.</p>
-
-    <h3>Student-Centred Learning</h3>
-    <p>Control sits with the student. They choose which report to analyse, which position to take, which classmate to rebut, which of the two model syntheses to work from. The teacher sets the material and the constraints; the student supplies the content, the stance and the pace. The self-tracking workspaces and the asynchronous Padlet wall exist to make that autonomy practical — feedback arrives without waiting for the teacher.</p>
+    <div class="theory">
+      <div>
+        <h4 class="label">Authentic Materials</h4>
+        <p>Texts made by real speakers for real audiences, with no pedagogical intent (Nunan, 1989). Their value is exposure to language as actually used — and, as Gilmore (2007) argues, motivation: students recognise the content as real, so the task stops feeling like an exercise.</p>
+      </div>
+      <div>
+        <h4 class="label">Writing and Speaking Process</h4>
+        <p>Both skills are treated as processes: plan, draft, revise against visible criteria. Chan, Lowie and de Bot (2016) found writing yields significantly higher lexical diversity than speech, because planning time lets students reach for words speech does not allow them to retrieve — so each mode is practised for what it uniquely develops.</p>
+      </div>
+      <div>
+        <h4 class="label">Communicative Language Teaching</h4>
+        <p>Language is learned by using it to mean something (Richards &amp; Rodgers, 2014). Nothing here has a single correct answer: students state opinions, defend positions, take sides. Language is the means; the message is the point.</p>
+      </div>
+      <div>
+        <h4 class="label">Task-Based Learning</h4>
+        <p>The task drives the language, not the reverse (Willis &amp; Willis, 2007). Each activity ends in a real outcome — a posted video, a rebuttal, a synthesis — and grammar appears because the task demands it, not because a syllabus scheduled it.</p>
+      </div>
+      <div>
+        <h4 class="label">Student-Centred Learning</h4>
+        <p>Students choose which report to analyse, which position to take, which classmate to rebut. The teacher sets the material and the constraints; the student supplies the stance and the pace. The self-tracking workspaces make that autonomy practical — feedback arrives without waiting for the teacher.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="creativity">
+  <section>
     <p class="label">05 — Creativity</p>
     <h2>What makes this sequence mine</h2>
-    <p>Three deliberate choices go beyond selecting good material.</p>
-    <div class="callout">
-      <h4 style="margin-top:0">The material arrives in its native format</h4>
-      <p>The TED Talk is not shown as a lecture recording — it is shown as a TikTok, in the feed, with the caption burned in and the translate button visible. The format is part of the authenticity, not a delivery inconvenience.</p>
-    </div>
-    <div class="callout">
-      <h4 style="margin-top:0">Two custom-built workspaces</h4>
-      <p>Rather than a worksheet, both writing activities are web apps I coded and deployed — with browser speech synthesis for the quotes, self-tracking steps, instant True/False feedback, and a live lexical-diversity meter that turns a research finding into something a student can watch move while they type.</p>
-    </div>
-    <div class="callout">
-      <h4 style="margin-top:0">Assigned roles instead of free opinion</h4>
-      <p>In the gamification debate, students argue the side they are given, not the side they hold. That single constraint converts a discussion into argumentation — and the timed video format on Padlet means every student, not just the confident ones, produces the same three minutes of English.</p>
-    </div>
+    <p>The TED Talk is not shown as a lecture recording — it is shown as a TikTok, in the feed, caption burned in. The format is part of the authenticity.</p>
+    <p>Both writing activities are web apps I coded and deployed rather than worksheets, with speech synthesis for the quotes, self-tracking steps, and a live lexical-diversity meter that turns a research finding into something a student can watch move while they type.</p>
+    <p>And in the debate, students argue the side they are <em>given</em>, not the side they hold — one constraint that converts a discussion into argumentation.</p>
   </section>
 
-  <section id="refs">
-    <p class="label">06 — References &amp; Links</p>
-    <h2>Sources</h2>
+  <section>
+    <p class="label">06 — References</p>
+    <h2>Sources &amp; links</h2>
 
-    <h3>Authentic materials used</h3>
+    <h3>Authentic materials</h3>
     <ol class="refs">
-      <li>Cutts, M. (2011). <em>Try something new for 30 days</em> [TED Talk]. Reposted by @monicahidalgo839 on TikTok. <a href="https://www.tiktok.com/@monicahidalgo839/video/7663259472340454663" target="_blank" rel="noopener">https://www.tiktok.com/@monicahidalgo839/video/7663259472340454663</a></li>
-      <li>TEDx / Big Think. <em>Gamification in education</em> [Video]. YouTube. <a href="https://youtu.be/tgg59icEFIE" target="_blank" rel="noopener">https://youtu.be/tgg59icEFIE</a></li>
-      <li>TEDx / Big Think. <em>Gamification in education</em> [Video]. YouTube. <a href="https://youtu.be/mOssYTimQwM" target="_blank" rel="noopener">https://youtu.be/mOssYTimQwM</a></li>
-      <li>BBC Science &amp; Environment Team. <em>Rewilding &amp; climate: How returning keystone species and forests restore natural ecosystems</em>. BBC News, London. <a href="https://www.bbc.com/news/science_and_environment" target="_blank" rel="noopener">https://www.bbc.com/news/science_and_environment</a></li>
-      <li>National Geographic Society. <em>Deep sea creatures in the Mariana Trench eat plastic, study finds</em>. National Geographic — Environment &amp; Ocean Exploration. <a href="https://www.nationalgeographic.com/environment" target="_blank" rel="noopener">https://www.nationalgeographic.com/environment</a></li>
+      <li>Cutts, M. (2011). <em>Try something new for 30 days</em> [TED Talk]. Reposted on TikTok by @monicahidalgo839. <a href="https://www.tiktok.com/@monicahidalgo839/video/7663259472340454663" target="_blank" rel="noopener">https://www.tiktok.com/@monicahidalgo839/video/7663259472340454663</a></li>
+      <li>TEDx. <em>Gamification in education</em> [Videos]. YouTube. <a href="https://youtu.be/tgg59icEFIE" target="_blank" rel="noopener">https://youtu.be/tgg59icEFIE</a> · <a href="https://youtu.be/mOssYTimQwM" target="_blank" rel="noopener">https://youtu.be/mOssYTimQwM</a></li>
+      <li>BBC Science &amp; Environment Team. <em>Rewilding &amp; climate: How returning keystone species and forests restore natural ecosystems</em>. BBC News. <a href="https://www.bbc.com/news/science_and_environment" target="_blank" rel="noopener">https://www.bbc.com/news/science_and_environment</a></li>
+      <li>National Geographic Society. <em>Deep sea creatures in the Mariana Trench eat plastic, study finds</em>. National Geographic. <a href="https://www.nationalgeographic.com/environment" target="_blank" rel="noopener">https://www.nationalgeographic.com/environment</a></li>
       <li>Di Stefano, N. (2025, October 15). <em>Is social media killing us?</em> Medium. <a href="https://medium.com" target="_blank" rel="noopener">https://medium.com</a></li>
-      <li>BBC My World. <em>Is social media good for you?</em> [Video with transcript], via British Council LearnEnglish Teens. <a href="https://learnenglishteens.britishcouncil.org" target="_blank" rel="noopener">https://learnenglishteens.britishcouncil.org</a></li>
+      <li>BBC My World. <em>Is social media good for you?</em> [Video], via British Council LearnEnglish Teens. <a href="https://learnenglishteens.britishcouncil.org" target="_blank" rel="noopener">https://learnenglishteens.britishcouncil.org</a></li>
     </ol>
 
-    <h3>Digital tools &amp; activity links</h3>
+    <h3>Activity links</h3>
     <ol class="refs">
-      <li>Padlet — <em>The Gamification Dilemma in Modern Classrooms</em> (interactive video wall). <a href="https://padlet.com/yvcriollo/the-gamification-dilemma-in-modern-classrooms-ogwu86uxnfuo809p" target="_blank" rel="noopener">https://padlet.com/yvcriollo/the-gamification-dilemma-in-modern-classrooms-ogwu86uxnfuo809p</a></li>
-      <li><em>Editorial Inquiry &amp; Content Analysis Workshop</em> (web app, deployed on Render). <a href="https://bless-your-heartt.onrender.com/" target="_blank" rel="noopener">https://bless-your-heartt.onrender.com/</a></li>
-      <li><em>Writing a Blog Response</em> (web app, deployed on Render). <a href="https://fiiddnocchpionad.onrender.com/" target="_blank" rel="noopener">https://fiiddnocchpionad.onrender.com/</a></li>
+      <li>Padlet — <em>The Gamification Dilemma in Modern Classrooms</em>. <a href="https://padlet.com/yvcriollo/the-gamification-dilemma-in-modern-classrooms-ogwu86uxnfuo809p" target="_blank" rel="noopener">https://padlet.com/yvcriollo/the-gamification-dilemma-in-modern-classrooms-ogwu86uxnfuo809p</a></li>
+      <li><em>Editorial Inquiry &amp; Content Analysis Workshop</em>. <a href="https://bless-your-heartt.onrender.com/" target="_blank" rel="noopener">https://bless-your-heartt.onrender.com/</a></li>
+      <li><em>Writing a Blog Response</em>. <a href="https://fiiddnocchpionad.onrender.com/" target="_blank" rel="noopener">https://fiiddnocchpionad.onrender.com/</a></li>
     </ol>
 
-    <h3>Theoretical sources</h3>
+    <h3>Theory</h3>
     <ol class="refs">
-      <li>Chan, H., Lowie, W., &amp; de Bot, K. (2016). <em>The dynamics of lexical diversity in second language writing and speaking.</em> A comparison of learners' written and spoken production showing significantly higher lexical diversity in writing.</li>
-      <li>Council of Europe. (2020). <em>Common European Framework of Reference for Languages: Learning, teaching, assessment — Companion volume.</em> Council of Europe Publishing. <a href="https://www.coe.int/en/web/common-european-framework-reference-languages" target="_blank" rel="noopener">https://www.coe.int/en/web/common-european-framework-reference-languages</a></li>
+      <li>Chan, H., Lowie, W., &amp; de Bot, K. (2016). <em>The dynamics of lexical diversity in second language writing and speaking.</em></li>
+      <li>Council of Europe. (2020). <em>Common European Framework of Reference for Languages — Companion volume.</em> Council of Europe Publishing.</li>
       <li>Gilmore, A. (2007). Authentic materials and authenticity in foreign language learning. <em>Language Teaching, 40</em>(2), 97–118.</li>
       <li>Nunan, D. (1989). <em>Designing tasks for the communicative classroom.</em> Cambridge University Press.</li>
       <li>Richards, J. C., &amp; Rodgers, T. S. (2014). <em>Approaches and methods in language teaching</em> (3rd ed.). Cambridge University Press.</li>
       <li>Willis, D., &amp; Willis, J. (2007). <em>Doing task-based teaching.</em> Oxford University Press.</li>
     </ol>
 
-    <p class="end">Theme 8 · Four authentic materials, two skills, one B2 classroom. All screens shown in this ebook are reconstructions — every original is one link away.</p>
+    <p class="end">Theme 8 · Four authentic materials, two skills, one B2 classroom. Screens are reconstructions — every original is one link away.</p>
   </section>
 
 </div>
